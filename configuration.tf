@@ -7,4 +7,8 @@ provider "azurerm" {
 resource "azurerm_resource_group" "rg" {
     name = "myTFResourceGroup"
     location = "westeurope"
+
+    tags = {
+        environment = "TF sandbox"
+    }
 }
