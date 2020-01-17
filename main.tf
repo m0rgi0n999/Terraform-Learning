@@ -100,18 +100,3 @@ resource "azurerm_virtual_machine" "vm" {
     disable_password_authentication = false
   }
 }
-
-**NOTE**
-Do not forget to stop the virtual machine or use `terraform destroy` to remove it when you are done with this lesson, to avoid being charged for the instance while you're not using it. Recall that Terraform relies on state to know what to destroy, so if you plan to come back to this later you'll want to preserve the entire contents of your working directory until you are ready to destroy this infrastructure.
-
----
-
-
-
-## Complete configuration
-
-```hcl
-
-
-
->>>>>>> 81d9e53... Updates to TF AZ Getting Started
