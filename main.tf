@@ -37,7 +37,7 @@ resource "azurerm_public_ip" "publicip" {
 # Create Network Security Group and rule
 resource "azurerm_network_security_group" "nsg" {
   name                = "myTFNSG"
-  location            = "westus2"
+  location            = "westeurope"
   resource_group_name = azurerm_resource_group.rg.name
 
   security_rule {
@@ -56,7 +56,7 @@ resource "azurerm_network_security_group" "nsg" {
 # Create network interface
 resource "azurerm_network_interface" "nic" {
   name                      = "myNIC"
-  location                  = "westus2"
+  location                  = "westeurope"
   resource_group_name       = azurerm_resource_group.rg.name
   network_security_group_id = azurerm_network_security_group.nsg.id
 
@@ -71,7 +71,7 @@ resource "azurerm_network_interface" "nic" {
 # Create a Linux virtual machine
 resource "azurerm_virtual_machine" "vm" {
   name                  = "myTFVM"
-  location              = "westus2"
+  location              = "westeurope"
   resource_group_name   = azurerm_resource_group.rg.name
   network_interface_ids = [azurerm_network_interface.nic.id]
   vm_size               = "Standard_DS1_v2"
