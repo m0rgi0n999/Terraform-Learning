@@ -5,7 +5,7 @@ provider "azurerm" {
 
 # Create Resource Group
 resource "azurerm_resource_group" "rg" {
-    name = "myTFResourceGroup"
+    name = "myTF"
     location = "westeurope"
 
     tags = {
